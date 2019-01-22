@@ -8,11 +8,20 @@
   <body>
     <div id="welcome">
       <h1> Seja muito bem-vinda(o) ao Codificador Cipher </h1> 
-      <p> Digite uma frase para ser codificada: 
+      <h2> Entenda o que é o Cipher </h2>
+      <p> Com o Cipher você pode criptografar mensagens pelo sistema "Cifra de César". É um tipo de cifra por substituição, onde será deslocada as letras de lugar. E assim quem ler, não entenderá o que está escrito.
+      
+      <p> Digite uma mensagem para ser codificada: 
         <input type="text" id="phrase">
+        <br>
+      </p>
+      <p> Digite um número entre 1 e 25: 
+        <input type="text" id="desloc">
         <input onclick="encode();" type="submit">
+        <br>
       </p>
       <br>
+
       <p> Resultado da sua frase codificada: 
         <input type="text" id="phraseEncoded">
         <input onclick="decode();" type="submit" value="Descodificar">
