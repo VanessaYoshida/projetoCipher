@@ -6,7 +6,22 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <div id="welcome">
+      <h1> Seja muito bem-vinda(o) ao Codificador Cipher </h1> 
+      <p> Digite uma frase para ser codificada: 
+        <input type="text" id="phrase">
+        <input onclick="encode();" type="submit">
+      </p>
+      <br>
+      <p> Resultado da sua frase codificada: 
+        <input type="text" id="phraseEncoded">
+        <input onclick="decode();" type="submit" value="Descodificar">
+      </p>
+
+    </div>
+
     <div id="root"></div>
+
     <script src="cipher.js"></script>
     <script src="index.js"></script>
   </body>
