@@ -18,7 +18,7 @@
         <input type="text" id="phrase">
         <br>
       </p>
-      <p> Digite um número entre 1 e 25: <br>
+      <p> Digite um número para o deslocamento: <br>
         <input type="text" id="desloc">
         <br><br>
         <input onclick="encode();" type="submit">
@@ -27,15 +27,15 @@
       <br>
 
       <p> Resultado da sua frase codificada: 
-        <input type="text" id="phraseEncoded">
-        <input onclick="decode();" type="submit" value="Descodificar">
+        <div id="phraseEncoded"></div>
       </p>
 
+      <input onclick="decode();" type="submit" value="Descodificar">
     </div>
 
     <div id="root"></div>
 
     <script src="cipher.js"></script>
-    <script src="index.js"></script>
+    <script src="tests.js"></script>
   </body>
 </html>
