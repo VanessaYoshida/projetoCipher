@@ -11,25 +11,39 @@ function cipher(phrase, desloc){
         let cipherChar = "";
 
         let char = phrase.charCodeAt(i);
+        let especial = phrase.charCodeAt(i);
+        char = parseInt(char);
+        let desloc = parseInt(desloc);
+                
         if (char > 64 && char < 91 && char != (char % 26 == 0)) { 
-            deslocChar = (((parseInt(char)- 65) + parseInt(desloc)) % 26) + 65;
-            if (char = (char % 26 == 0)){
+            deslocChar = (((char - 65) + desloc) % 26);
+            if (char % 26 == 0){
                 deslocChar = deslocChar + 3;
+            }
+            else {
+                deslocChar = deslocChar + 65;
             }
             cipherChar = String.fromCharCode(deslocChar);
             finalPhrase = finalPhrase + cipherChar;
         }
-        if (char > 96 && char < 123 && char != (char % 26 == 0)) {
-            deslocChar = (((parseInt(char)- 97) + parseInt(desloc)) % 26) + 97;
-            if (char = (char % 26 == 0)){
+        else if (char > 96 && char < 123 && char != (char % 26 == 0)) {
+            deslocChar = (((char- 97) + desloc) % 26);
+            if (char % 26 == 0){
                 deslocChar = deslocChar + 3;
+            }
+            else {
+                deslocChar = deslocChar + 97;
             }
             cipherChar = String.fromCharCode(deslocChar);
             finalPhrase = finalPhrase + cipherChar;
         }
-        else {
-        deslocChar = parseInt(char) + parseInt(desloc);
+        else if (especial > 127 && especial < 238) {
+        deslocChar = (((especial - 128) + desloc) % 109);
         cipherChar = String.fromCharCode(deslocChar);
+        finalPhrase = finalPhrase + cipherChar;
+        }
+        else if (char == 32) {
+        cipherChar = " ";
         finalPhrase = finalPhrase + cipherChar;
         }
       
