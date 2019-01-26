@@ -30,7 +30,23 @@
         <div id="phraseEncoded"></div>
       </p>
 
-      <input onclick="decode();" type="submit" value="Descodificar">
+
+      <p> Digite uma mensagem para ser descodificada: <br>
+        <input type="text" id="codedPhrase">
+        <br>
+      </p>
+      <p> Digite o código para descodificar: <br>
+        <input type="text" id="deslocCode">
+        <br><br>
+        <input onclick="decode();" type="submit" value="Descodificar">
+        <br>
+      </p>
+      <br>
+
+      <p> Resultado da sua frase descodificada: 
+        <div id="phraseDecoded"></div>
+      </p>
+     
     </div>
 
     <div id="root"></div>
