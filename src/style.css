@@ -5,7 +5,7 @@ body {
 }
 
 h1 { 
-    font-family: 'Orbitron', sans-serif; font-size: 60px; font-style: normal; font-variant: normal; font-weight: 900; line-height: 50px; 
+    font-family: 'Orbitron', sans-serif; font-size: 50px; font-style: normal; font-variant: normal; font-weight: 800; line-height: 80px; 
 }
 
 h3 { 
@@ -14,6 +14,10 @@ h3 {
 
 p { 
     font-size: 25px; font-style: normal; font-variant: normal; line-height: 24px; 
+}
+
+.hide{
+    display: none;
 }
 
 input {
@@ -96,6 +100,23 @@ textarea {
     color: #6FD4F8;
 }
 
+.button-category {
+    width: 150px;
+    height: 50px;
+    border:none;
+    border-radius: 5px;
+    background-color: #432b5a;
+    color: white;
+    font-weight: bold;
+    outline: none;
+    cursor: pointer;  
+    margin: 20px;  
+}
+
+.button-category:hover{
+    background-color: #834CA2;
+  }  
+  
 .button {
     width: 150px;
     height: 50px;
@@ -109,9 +130,7 @@ textarea {
     font-size: 20px;     
   }
 
-.button:hover{
-    background-color: #834CA2;
-  }  
+c
 
 /*
 .box {

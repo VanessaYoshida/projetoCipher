@@ -2,6 +2,20 @@
   
 };
 */
+
+//Decisão do usuário: Codificar frase
+let encodeBtn = () => {
+    document.getElementById("code").classList.remove("hide"); 
+    document.getElementById("decode").classList.add("hide");
+}
+
+//Decisão do usuário: Descodificar frase
+let decodeBtn = () => {
+    document.getElementById("decode").classList.remove("hide");
+    document.getElementById("code").classList.add("hide");     
+}
+
+//Função para botão Codificar
 let encode = () => {
     let phraseTyped = document.getElementById("phrase").value;
     let displacement = document.getElementById("desloc").value;
@@ -9,6 +23,7 @@ let encode = () => {
     document.getElementById("phraseEncoded").innerHTML = result;
 }
 
+//Função para Codificar Frase
 let cipher = (phrase, desloc) => {
     let finalPhrase = "";
     
@@ -50,6 +65,7 @@ let cipher = (phrase, desloc) => {
     return finalPhrase;
 }
 
+//Função para botão descodificar
 let decode = () => {
     let phraseCoded = document.getElementById("codedPhrase").value;
     let code = document.getElementById("deslocCode").value;
@@ -57,6 +73,7 @@ let decode = () => {
     document.getElementById("phraseDecoded").innerHTML = resultado;
 }
 
+//Função para Descodificar a frase
 let decodePhrase = (phrase, desloc) => {
     let finalPhrase = "";
     

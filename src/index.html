@@ -14,10 +14,11 @@
       <p> Com o Cipher é possivel criptografar mensagens. </br>
         Basta digitar a mensagem e depois digitar um número de sua preferência. </br>
         Você também pode passar uma mensagem secreta para alguém. </br></br> 
-      <b><i>Dica: Passe a mensagem criptografada e o código para descodificar a mensagem.</i></b></br>
+      <input onclick="encodeBtn();" type="submit" value="Codificar" class="button-category">
+      <input onclick="decodeBtn();" type="submit" value="Descodificar" class="button-category"></br>
     </div>    
       
-    <div id="code" class="container">
+    <div id="code" class="container hide">
       <div class="row"> 
       <div class= "col col-2">
       <div class= "box">
@@ -34,7 +35,10 @@
       </div>
       </div>
       </div>
-    <div id="decode">
+    </div>
+
+    <div id="decode" class="container hide">
+      <p><b><i>Dica: </b> Para descodificar uma mensagem, ela já deve estar codificada e você deve saber o número de deslocamento.</i></br></p>
       <div class="row">
       <div class= "col col-2">
       <div class= "box">
@@ -42,7 +46,7 @@
         <p> Digite uma mensagem para ser descodificada: <br>
           <input type="text" id="codedPhrase"><br>
         </p>
-        <p> Digite o código para descodificar: <br>
+        <p> Digite o número de deslocamento: <br>
           <input type="number" id="deslocCode" min="0"><br><br>
           <input onclick="decode();" type="submit" value="Descodificar" class="button"><br>
         </p>
@@ -52,7 +56,7 @@
       </div>
       </div>      
     </div>
-    </div>  
+      
 
     <script src="cipher.js"></script>
     <script src="tests.js"></script>
