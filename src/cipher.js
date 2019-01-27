@@ -2,14 +2,14 @@
   
 };
 */
-function encode(){
+let encode = () => {
     let phraseTyped = document.getElementById("phrase").value;
     let displacement = document.getElementById("desloc").value;
     let result = cipher(phraseTyped, displacement);
     document.getElementById("phraseEncoded").innerHTML = result;
 }
 
-function cipher(phrase, desloc){
+let cipher = (phrase, desloc) => {
     let finalPhrase = "";
     
     for (let i = 0; i < phrase.length; i++){
@@ -50,14 +50,14 @@ function cipher(phrase, desloc){
     return finalPhrase;
 }
 
-function decode(){
+let decode = () => {
     let phraseCoded = document.getElementById("codedPhrase").value;
     let code = document.getElementById("deslocCode").value;
     let resultado = decodePhrase(phraseCoded, code);
     document.getElementById("phraseDecoded").innerHTML = resultado;
 }
 
-function decodePhrase(phrase, desloc){
+let decodePhrase = (phrase, desloc) => {
     let finalPhrase = "";
     
     for (let i = 0; i < phrase.length; i++){
@@ -96,7 +96,7 @@ function decodePhrase(phrase, desloc){
         }
     }
     return finalPhrase;
-}
+};
 
 /*
 
