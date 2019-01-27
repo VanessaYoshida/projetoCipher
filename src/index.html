@@ -26,8 +26,8 @@
           <input type="text" id="phrase"><br>
         </p>
         <p> Digite um número para o deslocamento: <br>
-          <input type="number" id="desloc" ><br><br>
-          <input onclick="encode();" type="submit" value="Codificar" class="button"><br>
+          <input type="number" id="desloc" min="0"><br><br>
+          <input onclick="encode();" type="submit" value="Codificar" class="button"></br>
         </p>
         <p> Resultado da sua frase codificada: </p>
         <textarea id="phraseEncoded"> </textarea>
@@ -43,7 +43,7 @@
           <input type="text" id="codedPhrase"><br>
         </p>
         <p> Digite o código para descodificar: <br>
-          <input type="number" id="deslocCode" ><br><br>
+          <input type="number" id="deslocCode" min="0"><br><br>
           <input onclick="decode();" type="submit" value="Descodificar" class="button"><br>
         </p>
         <p> Resultado da sua frase descodificada: </p>
