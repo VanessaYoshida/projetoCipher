@@ -27,7 +27,7 @@ let encode = () => {
 let cipher = (phrase, desloc) => {
     let finalPhrase = "";
     
-    for (let i = 0; i < phrase.length; i++){
+    for (let i in phrase){
         let deslocChar = "";
         let cipherChar = "";
 
@@ -77,7 +77,7 @@ let decode = () => {
 let decodePhrase = (phrase, desloc) => {
     let finalPhrase = "";
     
-    for (let i = 0; i < phrase.length; i++){
+    for (let i in phrase){
         let deslocChar = "";
         let cipherChar = "";
         
