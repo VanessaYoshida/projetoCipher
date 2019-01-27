@@ -1,4 +1,129 @@
 body {
-    background-color:rgb(189, 196, 238);
+    background-color:rgb(0, 91, 156);
     text-align: center;
+    font-family: 'Lato', sans-serif;
 }
+
+h1 { 
+    font-family: 'Orbitron', sans-serif; font-size: 60px; font-style: normal; font-variant: normal; font-weight: 900; line-height: 50px; 
+}
+
+h3 { 
+    font-size: 30px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 30px; 
+}
+
+p { 
+    font-size: 25px; font-style: normal; font-variant: normal; line-height: 24px; 
+}
+
+input {
+    height: 30px;
+    font-size: 20px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+textarea {
+    height: 30px;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 20px;
+}
+
+@media (min-width: 1170px) {
+    .container {
+        max-width: 1170px;
+        padding: 0;
+    }
+}
+
+.row {
+    margin-left: -5px;
+    margin-right: -5px;
+}
+
+.row:before,
+.row:after {
+    content: "";
+    display: table;
+}
+
+.row:after {
+    clear: both;
+}
+
+.col {
+    display: inline-block;
+    vertical-align: top;
+    min-height: 1px;
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 100%;
+    margin-right: -4px;
+    *zoom: 1;
+    *display: inline;
+    
+} 
+
+@media (min-width: 480px) {
+    .col-2 {
+        width: 50%;
+    } 
+}
+
+.box {
+    background: #61558b;
+    padding: 5px;
+    text-align: center;
+    margin: 6px 0;
+    color: rgb(220, 222, 228);
+    border-radius: 46px;
+    background-image: url('img/fundo.jpg');
+    text-shadow:#000 1px -1px, #000 -1px 1px, #000 1px 1px, #000 -1px -1px;
+}
+
+.big {
+    height: 50px;
+}
+
+#return:hover{
+    color: #6FD4F8;
+}
+
+.button {
+    width: 150px;
+    height: 50px;
+    border:none;
+    border-radius: 5px;
+    background-color: #432b5a;
+    color: white;
+    font-weight: bold;
+    outline: none;
+    cursor: pointer;
+    font-size: 20px;     
+  }
+
+.button:hover{
+    background-color: #834CA2;
+  }  
+
+/*
+.box {
+  
+    padding: 20px;
+    text-align: center;
+    border-radius: 20px;
+    color: rgb(0, 0, 0);
+    width: 550px;
+    height: 340px;
+    margin: 20px auto;
+    font-weight: bold;
+  }
+  */
+  

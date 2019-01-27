@@ -4,52 +4,55 @@
     <meta charset="utf-8">
     <title>Caesar Cipher</title>
     <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
+
   </head>
   <body>
     <div id="welcome">
-      <h1> Seja muito bem-vinda(o) ao Codificador Cipher </h1> 
-      <h2> Entenda o que é o Cipher </h2>
-      <p> Aqui você pode criptografar mensagens. <br>
-        Nós vamos criptografar deslocando as posições das letras. <br>
-        E para ficar mais divertido, quem vai decidir a posição é você. <br>
-        <br>
+      <h1> Seja bem-vindo(a) ao Codificador Cipher </h1> 
+      <p> Com o Cipher é possivel criptografar mensagens. </br>
+        Basta digitar a mensagem e depois digitar um número de sua preferência. </br>
+        Você também pode passar uma mensagem secreta para alguém. </br></br> 
+      <b><i>Dica: Passe a mensagem criptografada e o código para descodificar a mensagem.</i></b></br>
+    </div>    
       
-      <p> Digite uma mensagem para ser codificada: <br>
-        <input type="text" id="phrase">
-        <br>
-      </p>
-      <p> Digite um número para o deslocamento: <br>
-        <input type="text" id="desloc">
-        <br><br>
-        <input onclick="encode();" type="submit">
-        <br>
-      </p>
-      <br>
-
-      <p> Resultado da sua frase codificada: 
-        <div id="phraseEncoded"></div>
-      </p>
-
-
-      <p> Digite uma mensagem para ser descodificada: <br>
-        <input type="text" id="codedPhrase">
-        <br>
-      </p>
-      <p> Digite o código para descodificar: <br>
-        <input type="text" id="deslocCode">
-        <br><br>
-        <input onclick="decode();" type="submit" value="Descodificar">
-        <br>
-      </p>
-      <br>
-
-      <p> Resultado da sua frase descodificada: 
-        <div id="phraseDecoded"></div>
-      </p>
-     
+    <div id="code" class="container">
+      <div class="row"> 
+      <div class= "col col-2">
+      <div class= "box">
+        <h3> Codificar Mensagem </h3>
+        <p> Digite uma mensagem para ser codificada: <br>
+          <input type="text" id="phrase"><br>
+        </p>
+        <p> Digite um número para o deslocamento: <br>
+          <input type="number" id="desloc" ><br><br>
+          <input onclick="encode();" type="submit" class="button"><br>
+        </p>
+        <p> Resultado da sua frase codificada: </p>
+        <textarea id="phraseEncoded"> </textarea>
+      </div>
+      </div>
+      </div>
+    <div id="decode">
+      <div class="row">
+      <div class= "col col-2">
+      <div class= "box">
+        <h3> Descodificar Mensagem </h3>
+        <p> Digite uma mensagem para ser descodificada: <br>
+          <input type="text" id="codedPhrase"><br>
+        </p>
+        <p> Digite o código para descodificar: <br>
+          <input type="number" id="deslocCode" ><br><br>
+          <input onclick="decode();" type="submit" value="Descodificar" class="button"><br>
+        </p>
+        <p> Resultado da sua frase descodificada: </p>
+        <textarea id="phraseDecoded"></textarea>
+      </div>
+      </div>
+      </div>      
     </div>
-
-    <div id="root"></div>
+    </div>  
 
     <script src="cipher.js"></script>
     <script src="tests.js"></script>

@@ -41,6 +41,11 @@ function cipher(phrase, desloc){
             cipherChar = String.fromCharCode(deslocChar);
             finalPhrase = finalPhrase + cipherChar;
         }
+        if (char == 32) {
+            cipherChar = String.fromCharCode(32);
+            finalPhrase = finalPhrase + cipherChar;
+        }
+
     }
     return finalPhrase;
 }
@@ -58,7 +63,7 @@ function decodePhrase(phrase, desloc){
     for (let i = 0; i < phrase.length; i++){
         let deslocChar = "";
         let cipherChar = "";
-
+        
         let char = phrase.charCodeAt(i);
         char = parseInt(char);
         desloc = parseInt(desloc);
@@ -85,11 +90,22 @@ function decodePhrase(phrase, desloc){
             cipherChar = String.fromCharCode(deslocChar);
             finalPhrase = finalPhrase + cipherChar;
         }
+        if (char == 32 ) {
+            cipherChar = String.fromCharCode(32);
+            finalPhrase = finalPhrase + cipherChar;
+        }
     }
     return finalPhrase;
 }
 
 /*
+
+else {
+                let teste = String.fromCharCode(char);
+                finalPhrase = finalPhrase + teste;
+        }
+
+        
         else if (!string || !/^[a-zA-Z\s]*$/.test(string)) {
         especial = especial.charCodeAt(i);    
         deslocChar = parseInt(especial) + desloc;
