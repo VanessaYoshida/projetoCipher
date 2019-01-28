@@ -1,18 +1,7 @@
-/* window.cipher = {
-  
-};
-*/
-
 //Decisão do usuário: Codificar frase
 let encodeBtn = () => {
     document.getElementById("code").classList.remove("hide"); 
     document.getElementById("decode").classList.add("hide");
-}
-
-//Decisão do usuário: Descodificar frase
-let decodeBtn = () => {
-    document.getElementById("decode").classList.remove("hide");
-    document.getElementById("code").classList.add("hide");     
 }
 
 //Função para botão Codificar
@@ -23,19 +12,15 @@ let encode = () => {
     document.getElementById("phraseEncoded").innerHTML = result;
 }
 
-//Função para Codificar Frase
 let cipher = (phrase, desloc) => {
     let finalPhrase = "";
+    let deslocChar = "";
+    let cipherChar = "";
     
     for (let i in phrase){
-        let deslocChar = "";
-        let cipherChar = "";
-
         let char = phrase.charCodeAt(i);
         char = parseInt(char);
-        desloc = parseInt(desloc);
-        //let especial = phrase;
-                
+        desloc = parseInt(desloc);   
         if (char > 64 && char < 91) { 
             if (desloc % 26 == 0){
                 deslocChar = (((char - 65 + 2) + desloc) % 26) + 65;
@@ -65,6 +50,12 @@ let cipher = (phrase, desloc) => {
     return finalPhrase;
 }
 
+//Decisão do usuário: Descodificar frase
+let decodeBtn = () => {
+    document.getElementById("decode").classList.remove("hide");
+    document.getElementById("code").classList.add("hide");   
+}    
+
 //Função para botão descodificar
 let decode = () => {
     let phraseCoded = document.getElementById("codedPhrase").value;
@@ -73,19 +64,15 @@ let decode = () => {
     document.getElementById("phraseDecoded").innerHTML = resultado;
 }
 
-//Função para Descodificar a frase
 let decodePhrase = (phrase, desloc) => {
     let finalPhrase = "";
-    
+    let deslocChar = "";
+    let cipherChar = "";
+
     for (let i in phrase){
-        let deslocChar = "";
-        let cipherChar = "";
-        
         let char = phrase.charCodeAt(i);
         char = parseInt(char);
         desloc = parseInt(desloc);
-        //let especial = phrase;
-                
         if (char > 64 && char < 91) { 
             if (desloc % 26 == 0){
                 deslocChar = (((char - 90 - 2) - desloc) % 26) + 90;
@@ -115,7 +102,17 @@ let decodePhrase = (phrase, desloc) => {
     return finalPhrase;
 };
 
-/*
+
+
+
+
+
+/* window.cipher = {
+  
+};
+
+
+//let especial = phrase;
 
 else {
                 let teste = String.fromCharCode(char);
@@ -127,10 +124,6 @@ else {
         especial = especial.charCodeAt(i);    
         deslocChar = parseInt(especial) + desloc;
         cipherChar = String.fromCharCode(deslocChar);
-        finalPhrase = finalPhrase + cipherChar;
-        }
-        else if (char == 32) {
-        cipherChar = " ";
         finalPhrase = finalPhrase + cipherChar;
         }
         */
