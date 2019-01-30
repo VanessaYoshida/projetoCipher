@@ -23,20 +23,23 @@ cipher.encode = (phrase, offset) => {
         let char = phrase.charCodeAt(i);
         char = parseInt(char);
         offset = parseInt(offset);   
-        if (char > 64 && char < 91) { 
-            deslocChar = (((char - 65) + offset) % 26) + 65;
-            cipherChar = String.fromCharCode(deslocChar);
-            finalPhrase = finalPhrase + cipherChar;
+        if (offset < 0){
+            offset += 26;
         }
-        else if (char > 96 && char < 123) {
-            deslocChar = (((char - 97) + offset) % 26) + 97;
-            cipherChar = String.fromCharCode(deslocChar);
-            finalPhrase = finalPhrase + cipherChar;
-        }
-        else {
-            cipherChar = phrase[i];
-            finalPhrase = finalPhrase + cipherChar;
-        }
+            if(char > 64 && char < 91){ 
+                deslocChar = (((char - 65) + offset) % 26) + 65;
+                cipherChar = String.fromCharCode(deslocChar);
+                finalPhrase += cipherChar;
+            }
+            else if (char > 96 && char < 123) {
+                deslocChar = (((char - 97) + offset) % 26) + 97;
+                cipherChar = String.fromCharCode(deslocChar);
+                finalPhrase += cipherChar;
+            }
+            else {
+                cipherChar = phrase[i];
+                finalPhrase += cipherChar;
+            }
     }
     return finalPhrase;
 }
@@ -64,19 +67,22 @@ cipher.decode = (phrase, offset) => {
         let char = phrase.charCodeAt(i);
         char = parseInt(char);
         offset = parseInt(offset);
+        if (offset < 0){
+            offset += 26;
+        }
         if (char > 64 && char < 91) {
             deslocChar = (((char - 90) - offset) % 26) + 90;
             cipherChar = String.fromCharCode(deslocChar);
-            finalPhrase = finalPhrase + cipherChar;
+            finalPhrase += cipherChar;
         }
         else if (char > 96 && char < 123) {
             deslocChar = (((char - 122) - offset) % 26) + 122;
             cipherChar = String.fromCharCode(deslocChar);
-            finalPhrase = finalPhrase + cipherChar;
+            finalPhrase += cipherChar;
         }
         else {
             cipherChar = String.fromCharCode(char);
-            finalPhrase = finalPhrase + cipherChar;
+            finalPhrase += cipherChar;
         }
     }
     return finalPhrase;
