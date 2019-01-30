@@ -21,7 +21,7 @@ A qualquer momento o usuário pode clicar em qualquer um dos botões.
 
 ## Diagrama de Bloco
 Segue link do Diagrama de Blocos do Projeto Cipher.
-https://github.com/VanessaYoshida/projetoCipher/blob/master/src/img/DiagramaCipher.png
+[Diagrama de Bloco](https://github.com/VanessaYoshida/projetoCipher/blob/master/src/img/DiagramaCipher.png)
 
 ## Exemplo de usuário que precisa do Cipher
 
