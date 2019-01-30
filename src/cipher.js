@@ -14,13 +14,13 @@ let encode = () => {
     document.getElementById("phraseEncoded").innerHTML = result;
 }
 
-cipher.encode = (string, offset) => {
+cipher.encode = (phrase, offset) => {
     let finalPhrase = "";
     let deslocChar = "";
     let cipherChar = "";
     
-    for (let i in string){
-        let char = string.charCodeAt(i);
+    for (let i in phrase){
+        let char = phrase.charCodeAt(i);
         char = parseInt(char);
         offset = parseInt(offset);   
         if (char > 64 && char < 91) { 
@@ -28,16 +28,15 @@ cipher.encode = (string, offset) => {
             cipherChar = String.fromCharCode(deslocChar);
             finalPhrase = finalPhrase + cipherChar;
         }
-        if (char > 96 && char < 123) {
+        else if (char > 96 && char < 123) {
             deslocChar = (((char - 97) + offset) % 26) + 97;
             cipherChar = String.fromCharCode(deslocChar);
             finalPhrase = finalPhrase + cipherChar;
         }
         else {
-            cipherChar = String.fromCharCode(char);
+            cipherChar = phrase[i];
             finalPhrase = finalPhrase + cipherChar;
         }
-
     }
     return finalPhrase;
 }
@@ -56,13 +55,13 @@ let decode = () => {
     document.getElementById("phraseDecoded").innerHTML = resultado;
 }
 
-cipher.decode = (string, offset) => {
+cipher.decode = (phrase, offset) => {
     let finalPhrase = "";
     let deslocChar = "";
     let cipherChar = "";
 
-    for (let i in string){
-        let char = string.charCodeAt(i);
+    for (let i in phrase){
+        let char = phrase.charCodeAt(i);
         char = parseInt(char);
         offset = parseInt(offset);
         if (char > 64 && char < 91) {
@@ -70,7 +69,7 @@ cipher.decode = (string, offset) => {
             cipherChar = String.fromCharCode(deslocChar);
             finalPhrase = finalPhrase + cipherChar;
         }
-        if (char > 96 && char < 123) {
+        else if (char > 96 && char < 123) {
             deslocChar = (((char - 122) - offset) % 26) + 122;
             cipherChar = String.fromCharCode(deslocChar);
             finalPhrase = finalPhrase + cipherChar;
@@ -84,30 +83,6 @@ cipher.decode = (string, offset) => {
 };
 
 
-
-
-
 /* window.cipher = {
   
-};
-
-
-//let especial = phrase;
-
-else {
-                let teste = String.fromCharCode(char);
-                finalPhrase = finalPhrase + teste;
-        }
-
-        
-        else if (!string || !/^[a-zA-Z\s]*$/.test(string)) {
-        especial = especial.charCodeAt(i);    
-        deslocChar = parseInt(especial) + desloc;
-        cipherChar = String.fromCharCode(deslocChar);
-        finalPhrase = finalPhrase + cipherChar;
-        }
-        */
-
- 
-
-    
+};*/
