@@ -20,7 +20,6 @@ Na tela principal terá dois botões para escolher essas opções acima citadas.
 A qualquer momento o usuário pode clicar em qualquer um dos botões.
 
 ## Diagrama de Bloco
-Segue link do Diagrama de Blocos do Projeto Cipher.
 ![Diagrama de Bloco](https://github.com/VanessaYoshida/projetoCipher/blob/master/src/img/DiagramaCipher.png)
 
 ## Exemplo de usuário que precisa do Cipher
