@@ -6,6 +6,14 @@ let encodeBtn = () => {
     document.getElementById("decode").classList.add("hide");
 }
 
+//Decisão do usuário: Descodificar frase
+let decodeBtn = () => {
+    document.getElementById("decode").classList.remove("hide");
+    document.getElementById("code").classList.add("hide");   
+}    
+
+
+
 //Função para botão Codificar
 let encode = () => {
     let phraseTyped = document.getElementById("phrase").value;
@@ -15,7 +23,7 @@ let encode = () => {
 }
 
 cipher.encode = (string, offset) => {
-    let finalPhrase = "";
+    let finalPhrase = [];
     let deslocChar = "";
     let cipherChar = "";
     offset = parseInt(offset);
@@ -29,28 +37,24 @@ cipher.encode = (string, offset) => {
         if(char > 64 && char < 91){ 
             deslocChar = (((char - 65) + offset) % 26) + 65;
             cipherChar = String.fromCharCode(deslocChar);
-            finalPhrase += cipherChar;
+            finalPhrase.push(cipherChar);
         }
         else if (char > 96 && char < 123) {
             deslocChar = (((char - 97) + offset) % 26) + 97;
             cipherChar = String.fromCharCode(deslocChar);
-            finalPhrase += cipherChar;
+            finalPhrase.push(cipherChar);
         }
         else {
             cipherChar = String.fromCharCode(char);
-            finalPhrase += cipherChar;
+            finalPhrase.push(cipherChar);
             }
     }
-    return finalPhrase;
+    return finalPhrase.join('');
 }
 
-//Decisão do usuário: Quer descodificar 
-let decodeBtn = () => {
-    document.getElementById("decode").classList.remove("hide");
-    document.getElementById("code").classList.add("hide");   
-}    
 
-//Botão descodificar
+
+//Função para botão descodificar
 let decode = () => {
     let phraseCoded = document.getElementById("codedPhrase").value;
     let code = document.getElementById("deslocCode").value;
@@ -59,7 +63,7 @@ let decode = () => {
 }
 
 cipher.decode = (string, offset) => {
-    let finalPhrase = "";
+    let finalPhrase = [];
     let deslocChar = "";
     let cipherChar = "";
 
@@ -73,18 +77,18 @@ cipher.decode = (string, offset) => {
         if (char > 64 && char < 91) {
             deslocChar = (((char - 90) - offset) % 26) + 90;
             cipherChar = String.fromCharCode(deslocChar);
-            finalPhrase += cipherChar;
+            finalPhrase.push(cipherChar);
         }
         else if (char > 96 && char < 123) {
             deslocChar = (((char - 122) - offset) % 26) + 122;
             cipherChar = String.fromCharCode(deslocChar);
-            finalPhrase += cipherChar;
+            finalPhrase.push(cipherChar);
         }
         else {
             cipherChar = String.fromCharCode(char);
-            finalPhrase += cipherChar;
+            finalPhrase.push(cipherChar);
         }
     }
-    return finalPhrase;
+    return finalPhrase.join('');
 }
 

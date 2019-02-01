@@ -137,14 +137,17 @@ textarea {
     border:none;
     border-radius: 5px;
     background-color: #432b5a;
-    color: white;
+    color: rgb(0, 0, 0);
     font-weight: bold;
     outline: none;
     cursor: pointer;  
-    margin: 20px;  
+    margin: 20px;
+    text-align: center;
 }
 
 .button {
+    background-color: #432b5a;
+    color: rgb(255, 255, 255);
     margin-top: -10px;
 }
 
