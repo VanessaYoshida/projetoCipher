@@ -6,62 +6,67 @@
     <link rel="stylesheet" href="style.css" />
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
-
   </head>
+
   <body>
     <div id="welcome">
       <h1> Seja bem-vindo(a) ao Codificador Cipher </h1> 
       <h2> Com o Cipher é possivel criptografar mensagens. </br>
         Basta digitar a mensagem e depois digitar um número de sua preferência. </br>
-        Você também pode passar uma mensagem secreta para alguém. </br></br> </h2>
-        <h3> Escolha o que deseja fazer:</h3>
-        <input onclick="encodeBtn();" type="submit" value="Codificar" class="button-category">
-        <input onclick="decodeBtn();" type="submit" value="Descodificar" class="button-category"></br>
+        Você também pode passar uma mensagem secreta para alguém. </br></br>
+      </h2>
+      <h2> Escolha o que deseja fazer:</h2>
+      <input onclick="encodeBtn();" type="submit" value="Codificar" class="button-category">
+      <input onclick="decodeBtn();" type="submit" value="Descodificar" class="button-category"></br>
     </div>    
+    
     
     <div id="code" class="container hide">
       <div class="row"> 
       <div class= "col col-2">
-      <div class= "box">      
+      <div class= "box">   
         <h3> Codificar Mensagem </h3>
         <p> Digite uma mensagem para ser codificada: <br>
-          <input type="text" id="phrase"><br>
+        <textarea type="text" id="phrase"></textarea><br>
         </p>
         <p> Digite um número para o deslocamento: <br>
-          <input type="number" id="desloc"><br><br>
-          <input onclick="encode();" type="submit" value="Codificar" class="button"></br>
+        <input type="number" id="desloc"><br>
+        <input onclick="encode();" type="submit" value="Codificar" class="button"></br>
         </p>
         <p> Resultado da sua frase codificada: </p>
-        <textarea id="phraseEncoded"> </textarea><br>
-        <a href="index.html">Voltar para página principal</a>
+        <textarea id="phraseEncoded"></textarea><br>
+        <input onclick="refresh();" type="submit" value="Voltar" class="button">
+        <input onclick="clean();" type="submit" value="Limpar" class="button">
       </div>
       </div>
       </div>
     </div>
-  </form>
+  
 
     <div id="decode" class="container hide"> 
       <div class="row">
       <div class= "col col-2">
       <div class= "box">
-          <p id="dica"><i>Dica para descodificar uma mensagem: <br>
-            A mensagem já deve estar codificada e você deve saber o número de deslocamento.</i></br></p>
+        <p id="dica">Dicas para descodificar uma mensagem: <br>
+          - A mensagem já deve estar codificada. <br>
+          - Necessário saber o número de deslocamento.</br>
+        </p>
         <h3> Descodificar Mensagem </h3>
         <p> Digite uma mensagem para ser descodificada: <br>
-          <input type="text" id="codedPhrase"><br>
+        <textarea type="text" id="codedPhrase"></textarea><br>
         </p>
         <p> Digite o número de deslocamento: <br>
-          <input type="number" id="deslocCode"><br><br>
-          <input onclick="decode();" type="submit" value="Descodificar" class="button"><br>
+        <input type="number" id="deslocCode"><br>
+        <input onclick="decode();" type="submit" value="Descodificar" class="button"><br>
         </p>
         <p> Resultado da sua frase descodificada: </p>
         <textarea id="phraseDecoded"></textarea><br>
-        <a href="index.html">Voltar para página principal</a>
+        <input onclick="refresh();" type="submit" value="Voltar" class="button">
+        <input onclick="toClean();" type="submit" value="Limpar" class="button">
       </div>
       </div>
       </div>      
     </div>
-    
 
     <script src="cipher.js"></script>
     <script src="tests.js"></script>

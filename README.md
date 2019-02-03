@@ -3,7 +3,8 @@ Projeto Cipher - Vanessa Yoshida
 # Cifra de César
 
 ## Objetivo do Cipher
-O Cipher foi deselvolvido com o propósito de codificar e descodificar um texto. Nele o usuário precisa digitar uma mensagem e também um número de deslocamento para conseguir codificar essa mensagem. 
+O Cipher foi deselvolvido com o propósito de codificar e descodificar uma mensagem.
+Nele o usuário precisa digitar uma mensagem e também um número de deslocamento para conseguir codificar essa mensagem. 
 Ele funciona basicamente assim: coletamos a mensagem que foi inserida, e depois deslocamos as letras conforme o número que o usuário digitar. 
 Por exemplo se usarmos o deslocamento de 3:
 
@@ -23,13 +24,16 @@ O Cipher foi feito dessa forma pensando em dois tipos de usuários:
 Quem envia a mensagem codificada e quem recebe a mensagem descodificada. 
 Podem ser usuários de todos os tipos, por exemplo pessoas que querem fazer brincadeiras ou mandar mensagens ocultas.
 
+## Requisitos
+O Cipher foi programado em ES6 e de acordo com o site [ES6 e o suporte dos navegadores](http://www.timeraposa.com.br/2017/12/es6-e-o-suporte-dos-navegadores/) ES6 não é suportado por navegadores mais antigos, que foram desenvolvidos antes do seu lançamento. Esses navegadores mais antigos foram desenvolvidos para se adaptar à versão do JavaScript naquela época (que era a ES5.1). Se você tentar rodar seu código ES6 em um navegador antigo, ele não funcionará.
+
 ## Diagrama de Bloco
 Abaixo está o Diagrama de Blocos de como o Cipher funciona. 
 ![Diagrama de Bloco](https://github.com/VanessaYoshida/projetoCipher/blob/master/src/img/DiagramaCipher.png)
 Ele é bem simples, pois o Cipher ou codifica ou descodifica uma mensagem.
 
-## Exemplo de usuário que precisa do Cipher
-
+## Exemplos de usuário que precisa do Cipher
+Exemplo 1:
 O aniversário da sua mãe está se aproximando e você está organizando uma festa
 surpresa. Para manter a festa em segredo foi criado um grupo de Whatsapp com
 amigos e familiares. O problema é que as vezes sua mãe utiliza o seu celular
@@ -37,10 +41,10 @@ e pode ser que ela veja as suas mensagens. Como a festa é surpresa, você
 pode usar o Cipher para enviar mensagens criptografadas e depois seus familiares
 descriptografarem.
 
-Outro exemplo:
+Exemplo 2:
 Você quer mandar uma mensagem bonita para sua esposa, mas para ficar engraçado você pode mandar uma mensagem criptograda para ela e pedir para ela descriptografar. Ela vai adorar s2
 
-Mais exemplo só para finalizar:
+Exemplo 3:
 Você quer criar uma senha para o instagram mas está sem idéias, você pode testar alguns tipos e escolher o que você vai lembrar melhor. Mas não se esqueça viu? kkk
 QUalquer coisa, anote sua frase e o deslocamento em um diário, por via das dúvidas.
 
@@ -71,5 +75,3 @@ As funções encode / decode, recebem a mensagem que o usuário digitou e armaze
 Depois ele passa esses valores para outra função: que se chama cipher.encode ou cipher.decode. Essas funções vão fazer o processo de codificação ou descodificação, e vão passar o resultado para as funções anteriores (encode / decode), que vai receber o resultado e entregar esse resultado na tela.
 
 
-## Requisitos
-O Cipher foi programado em ES6 e de acordo com o site [ES6 e o suporte dos navegadores](http://www.timeraposa.com.br/2017/12/es6-e-o-suporte-dos-navegadores/) ES6 não é suportado por navegadores mais antigos, que foram desenvolvidos antes do seu lançamento. Esses navegadores mais antigos foram desenvolvidos para se adaptar à versão do JavaScript naquela época (que era a ES5.1). Se você tentar rodar seu código ES6 em um navegador antigo, ele não funcionará.

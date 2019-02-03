@@ -47,7 +47,7 @@ cipher.encode = (string, offset) => {
         else {
             cipherChar = String.fromCharCode(char);
             finalPhrase.push(cipherChar);
-            }
+        }
     }
     return finalPhrase.join('');
 }
@@ -92,3 +92,19 @@ cipher.decode = (string, offset) => {
     return finalPhrase.join('');
 }
 
+
+refresh = () => {
+        window.location.reload();
+    }
+
+clean = () => {
+    document.querySelector("#phrase").value = "";
+    document.querySelector("#desloc").value = "";
+    document.querySelector("#phraseEncoded").value = "";
+}    
+
+toClean = () => {
+    document.querySelector("#codedPhrase").value = "";
+    document.querySelector("#deslocCode").value = "";
+    document.querySelector("#phraseDecoded").value = "";
+}    
