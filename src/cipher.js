@@ -100,11 +100,11 @@ refresh = () => {
 clean = () => {
     document.querySelector("#phrase").value = "";
     document.querySelector("#desloc").value = "";
-    document.querySelector("#phraseEncoded").value = "";
+    document.getElementById("phraseEncoded").innerHTML = "";
 }    
     
 toClean = () => {
     document.querySelector("#codedPhrase").value = "";
     document.querySelector("#deslocCode").value = "";
-    document.querySelector("#phraseDecoded").value = "";
+    document.getElementById("phraseDecoded").innerHTML = "";
 }    
