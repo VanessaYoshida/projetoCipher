@@ -28,9 +28,9 @@ Podem ser usuários de todos os tipos, por exemplo pessoas que querem fazer brin
 O Cipher foi programado em ES6 e de acordo com o site [ES6 e o suporte dos navegadores](http://www.timeraposa.com.br/2017/12/es6-e-o-suporte-dos-navegadores/) ES6 não é suportado por navegadores mais antigos, que foram desenvolvidos antes do seu lançamento. Esses navegadores mais antigos foram desenvolvidos para se adaptar à versão do JavaScript naquela época (que era a ES5.1). Se você tentar rodar seu código ES6 em um navegador antigo, ele não funcionará.
 
 ## Diagrama de Bloco
-Abaixo está o Diagrama de Blocos de como o Cipher funciona. 
+Segue abaixo o Diagrama de Blocos de como o Cipher funciona. 
+
 ![Diagrama de Bloco](https://github.com/VanessaYoshida/projetoCipher/blob/master/src/img/DiagramaCipher.png)
-Ele é bem simples, pois o Cipher ou codifica ou descodifica uma mensagem.
 
 ## Exemplos de usuário que precisa do Cipher
 Exemplo 1:
