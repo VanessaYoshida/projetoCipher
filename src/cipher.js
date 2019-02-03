@@ -102,7 +102,7 @@ clean = () => {
     document.querySelector("#desloc").value = "";
     document.querySelector("#phraseEncoded").value = "";
 }    
-
+    
 toClean = () => {
     document.querySelector("#codedPhrase").value = "";
     document.querySelector("#deslocCode").value = "";
