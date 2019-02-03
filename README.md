@@ -32,6 +32,14 @@ Segue abaixo o Diagrama de Blocos de como o Cipher funciona.
 
 ![Diagrama de Bloco](https://github.com/VanessaYoshida/projetoCipher/blob/master/src/img/DiagramaCipher.png)
 
+## Como o Cipher foi programado
+O usuário terá duas opções: Codificar ou Descodificar. 
+Tem uma div para mostrar ou a tela de codificar ou a tela para descodificar uma mensagem, onde ambas estarão ocultas aguandando o usuário chamá-las. 
+Quando ele clicar em um dos botões de sua preferêcia, ele entrará em uma execução que está programada em cipher.js. Dependendo da escolha do usuário, ele entrará em uma das funções: encodeBtn ou decodeBtn, essas funções fazem aparecer uma das div's para a pessoa preencher os dados, e ao mesmo tempo faz a outra div permanecer/ficar oculta. 
+Nessa tela que aparecer, o usuário digita a mensagem e o deslocamento. Quando ele clicar para executar a ação de codificar / descodificar, ele chamará a função encode(); ou a função decode();. 
+As funções encode / decode, recebem a mensagem que o usuário digitou e armazena em uma variável. E recebe o deslocamento e armazena em uma variável. 
+Depois ele passa esses valores para outra função: que se chama cipher.encode ou cipher.decode. Essas funções vão fazer o processo de codificação ou descodificação, e vão passar o resultado para as funções anteriores (encode / decode), que vai receber o resultado e entregar esse resultado na tela.
+
 ## Exemplos de usuário que precisa do Cipher
 Exemplo 1:
 O aniversário da sua mãe está se aproximando e você está organizando uma festa
@@ -65,13 +73,4 @@ Atualmente todas as cifras de substituição alfabética simples, são descifrad
 com facilidade e não oferecem muita segurança na comunição, mas a cifra de
 César muitas vezes pode fazer parte de um sistema mais complexo de
 criptografia, como a cifra de Vigenère, e tem aplicação no sistema ROT13.
-
-## Como o Cipher foi programado
-O usuário terá duas opções: Codificar ou Descodificar. 
-Tem uma div para mostrar ou a tela de codificar ou a tela para descodificar uma mensagem, onde ambas estarão ocultas aguandando o usuário chamá-las. 
-Quando ele clicar em um dos botões de sua preferêcia, ele entrará em uma execução que está programada em cipher.js. Dependendo da escolha do usuário, ele entrará em uma das funções: encodeBtn ou decodeBtn, essas funções fazem aparecer uma das div's para a pessoa preencher os dados, e ao mesmo tempo faz a outra div permanecer/ficar oculta. 
-Nessa tela que aparecer, o usuário digita a mensagem e o deslocamento. Quando ele clicar para executar a ação de codificar / descodificar, ele chamará a função encode(); ou a função decode();. 
-As funções encode / decode, recebem a mensagem que o usuário digitou e armazena em uma variável. E recebe o deslocamento e armazena em uma variável. 
-Depois ele passa esses valores para outra função: que se chama cipher.encode ou cipher.decode. Essas funções vão fazer o processo de codificação ou descodificação, e vão passar o resultado para as funções anteriores (encode / decode), que vai receber o resultado e entregar esse resultado na tela.
-
 
