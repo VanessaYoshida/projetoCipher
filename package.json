@@ -1,0 +1,30 @@
+{
+  "name": "projetocipher",
+  "version": "1.0.0",
+  "description": "Programa que codifica ou descodifica mensagens",
+  "main": "cipher.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VanessaYoshida/projetoCipher.git"
+  },
+  "keywords": [
+    "codificar",
+    "descodificar",
+    "cipher"
+  ],
+  "author": "Vanessa Yoshida",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VanessaYoshida/projetoCipher/issues"
+  },
+  "homepage": "https://github.com/VanessaYoshida/projetoCipher#readme",
+  "dependencies": {
+    "eslint": "^6.0.0"
+  }
+}
